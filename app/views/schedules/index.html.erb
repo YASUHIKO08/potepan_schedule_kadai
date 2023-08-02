@@ -26,8 +26,8 @@
         <tr>
         <td class = table_date><%= schedule.id %></td>
         <td class = table_date><%= schedule.title %></td>
-        <td class = table_date><%= schedule.start.strftime("%Y年%m月%d日") %></td>
-        <td class = table_date><%= schedule.end.strftime("%Y年%m月%d日") %></td>
+        <td class = table_date><%= schedule.start.strftime("%Y/%m/%d") %></td>
+        <td class = table_date><%= schedule.end.strftime("%Y/%m/%d/") %></td>
         <td class = table_date><% if schedule.all_day == true %>
         ○
         <% elsif schedule.all_day == false %>
@@ -43,6 +43,6 @@
   </div>
   <div class = table_bottom>
     <p>合計<%= Schedule.count(:id) %>件</p>
-    <p>今日の日付:<%= Date.current.strftime('%Y年 %m月 %d日') %></p>
+    <p>今日の日付:<%= Date.current.strftime('%Y/%m/%d') %></p>
   </div>
 </section>
