@@ -7,11 +7,11 @@
     <table class = table_record>
       <tr>
         <th class = db_title>開始日</th>
-          <td class = edit_db><%= @schedule.start %></td>
+          <td class = edit_db><%= @schedule.start.strftime("%Y/%m/%d") %></td>
       </tr>
       <tr>
         <th class = db_title>終了日</th>
-          <td class = edit_db><%= @schedule.end %></td>
+          <td class = edit_db><%= @schedule.end.strftime("%Y/%m/%d") %></td>
       </tr>
       <tr>
         <th class = db_title>終日</th>
